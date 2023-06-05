@@ -1,20 +1,30 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Merge sort");
     }
     public static boolean isSorted(int[] array){
-        for (int i = 0, i < array.length - 1; i++){
+        for (int i = 0; i < array.length - 1; i++){
             if(array[i] > array[i + 1]){
                 return false;
             }
         }
-        return false;
+        return true;
     }
     public static int[] merge(int[] left, int[] right){
         return null;
     }
 
     public static int[] merge(int[] array){
+        if(isSorted(array)){
+            return array;
+        }
+        int[] left = Arrays.copyOfRange(array,0,array.length / 2);
+        int[] right = Arrays.copyOfRange(array,array.length / 2, array.length);
+        left = mergeSort(left);
+        right = mergeSort(rigth);
+        int[] merged = merge(left,rigth);
         return null;
     }
 }
