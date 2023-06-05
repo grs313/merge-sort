@@ -13,6 +13,25 @@ public class Main {
         return true;
     }
     public static int[] merge(int[] left, int[] right){
+        int[] array = new int[left.length + right.length];
+        int arrayIndex = 0;
+        int leftIndex = 0;
+        int rightIndex = 0;
+        while (int i = 0; i < array.length && rigthIndex < rigth.length && leftIndex < left.length){
+            if(left[leftIndex] < rigth[rightIndex]){
+                array[arrayIndex] = left[leftIndex];
+                leftIndex++;
+            }else{
+                array[arrayIndex] = right[rightIndex];
+                rightIndex++;
+            }
+            arrayIndex++;
+        }
+        while (rightIndex < rigth.length){
+            array[arrayIndex] = rigth[rightIndex];
+            leftIndex++;
+            arrayIndex++;
+        }
         return null;
     }
 
